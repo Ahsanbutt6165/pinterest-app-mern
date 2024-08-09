@@ -14,7 +14,7 @@ cloudinary.v2.config({
 });
 app.use(cors(
   {
-    origin: {"https://hotel-backend-xi.vercel.app"},
+    origin: {"https://pinterest-clone-o4n6.vercel.app/"},
     methods: {"POST", "GET", "DELETE", "PUT"},
     credentials: true
   }
