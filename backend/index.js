@@ -29,7 +29,7 @@ import pinRoutes from "./routes/pinRoutes.js";
 app.use("/api/user", userRoutes);
 app.use("/api/pin", pinRoutes);
 
-// for hosting project
+// for hosting frontend and backend on same port
 const __dirname = path.resolve("/Users/hp/Desktop/pinterest-clone");
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
