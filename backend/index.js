@@ -12,13 +12,7 @@ cloudinary.v2.config({
   api_key: process.env.Cloud_Api,
   api_secret: process.env.Cloud_Secret,
 });
-app.use(cors(
-  {
-    origin: {"https://pinterest-clone-o4n6.vercel.app/"},
-    methods: {"POST", "GET", "DELETE", "PUT"},
-    credentials: true
-  }
-));
+
 const app = express();
 
 const PORT = process.env.PORT;
