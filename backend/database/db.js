@@ -3,7 +3,7 @@ import { connect } from "mongoose";
 
 const connectToMongo = async () => {
   try {
-    await connect(process.env.MONGO_URL, {
+    await connect(process.env.MONGODB_URI, {
       dbName: "pinterest",
     });
     console.log(" ----data base connected successfully----");
