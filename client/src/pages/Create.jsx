@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { PinData } from "../context/PinContext";
 import { useNavigate } from "react-router-dom";
+import { LoadingAnimation } from "../components/Loading";
 
 const Create = () => {
   const inputRef = useRef(null);
@@ -14,7 +15,7 @@ const Create = () => {
   const [filePrev, setFilePrev] = useState("");
   const [title, setTitle] = useState("");
   const [pin, setPin] = useState("");
-  const { addPin } = PinData();
+  const { addPin, loading } = PinData();
 
   const changeFileHandler = (e) => {
     const file = e.target.files[0];
@@ -107,7 +108,9 @@ const Create = () => {
                   required
                 />
               </div>
-              <button className="common-btn">Add+</button>
+              <button className="common-btn ">
+                {loading ? <LoadingAnimation /> : "Add+"}
+              </button>
             </form>
           </div>
         </div>

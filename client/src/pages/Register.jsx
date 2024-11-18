@@ -29,7 +29,7 @@ const Register = () => {
           />
         </div>
         <h2 className="text-2xl font-semibold text-center mb-6">
-          Register to pinterest
+          Register to PinSocial
         </h2>
         <form onSubmit={submitHandler}>
           <div className="mb-4">

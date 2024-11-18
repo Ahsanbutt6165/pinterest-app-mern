@@ -91,15 +91,18 @@ export const PinProvider = ({ children }) => {
     setPin,
     navigate
   ) {
+    setLoading(true);
     try {
       const { data } = await axios.post("/api/pin/new", formData);
 
       toast.success(data.message);
+
       setFile([]);
       setFilePrev("");
       setPin("");
       setTitle("");
       fetchPins();
+      setLoading(false);
       navigate("/");
     } catch (error) {
       toast.error(error.response.data.message);
